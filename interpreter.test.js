@@ -21,3 +21,11 @@ describe("interpreter error when not all the elements are integers", () => {
     //     expect(result).toBe([2, 0, 0, 0, 99])
     // })
 })
+
+describe("interpreter error when not valid opcode", () => {
+    test("test if return error when we pass a not valid opcode", () => {
+        const result = interpreter([10, 3, 5, 6, 7, 8])
+        expect(result).toBe(Errors.ERROR_NOT_VALID_OPCODE)
+    })
+
+})
